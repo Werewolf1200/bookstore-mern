@@ -12,14 +12,16 @@ dotenv.config(); // Leer .env
 // Parsing Request Body
 app.use(express.json()); // Leer Json
 
-//  Middleware for handling CORS Policy
+// Middleware for handling CORS Policy
+app.use(cors());
+/*
 app.use(
   cors({
-    origin: "http://localhost:4000",
+    origin: "http://localhost:3000",
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type"],
   })
-);
+);*/
 
 connectToDB();
 
